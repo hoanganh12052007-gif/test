@@ -1,27 +1,15 @@
-﻿namespace test;
-
-public class Student
+﻿using System;
+class student
 {
-    public string Name { get; set; }
-    public int Age { get; set; }
-    public double GPA { get; set; }
-
-    public Student(string name, int age, double gpa)
+    public string name { get; set; } public int age { get; set; } public int id { get; set; }
+    public student(string name, int age, int id)
     {
-        Name = name;
-        Age = age;
-        GPA = gpa;
+        this.name = name;
+        this.age = age;
+        this.id = id;
     }
-
     public void DisplayInfo()
     {
-        Console.WriteLine($"Name: {Name}");
-        Console.WriteLine($"Age: {Age}");
-        Console.WriteLine($"GPA: {GPA}");
-    }
-
-    public bool IsPassed()
-    {
-        return GPA >= 5.0;
+        Console.WriteLine($"Name: {name}, Age: {age}, ID: {id}");
     }
 }
